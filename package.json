@@ -1,0 +1,15 @@
+{
+  "name": "snake_case",
+  "version": "0.1.0",
+  "description": "A snake case command line utility",
+  "author": "GraphHopper Community",
+  "license": "Apache-2.0",
+  "main": "snake_case.js",
+  "dependencies": {
+    "js-yaml": "3.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/karussell/snake_case.git"
+  }
+}
