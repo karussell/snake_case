@@ -9,7 +9,7 @@ DIR=$1
 
 for file in $DIR/*.yml; do
   filename=$(basename "$file" .yml)
-  node snake_case.js $filename.yml gh=true > $filename-tmp.yml
-  mv $filename.yml $filename-old.yml
-  mv $filename-tmp.yml $filename.yml
+  node snake_case.js $DIR/$filename.yml gh=true > $DIR/$filename-tmp.yml
+  mv -i $DIR/$filename.yml $DIR/$filename-old.yml
+  mv $DIR/$filename-tmp.yml $DIR/$filename.yml
 done
