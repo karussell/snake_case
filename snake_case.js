@@ -26,14 +26,14 @@ function toSnakeCase(doc) {
   for (const [key, value] of Object.entries(doc)) {
     if (enableGH && key === "prepare.ch.weightings") {
        var values = value.split(",");
-       console.log(values)
        var encoders = doc["graph.flag_encoders"].split(",");
-       console.log(encoders)
        newObject.profiles = [];
        newObject.profiles_ch = [];
        for(const value of values) {
           for(const encoderStr of encoders) {
-             const encoder = encoderStr.indexOf("|") > 0? encoderStr.substr(0, encoderStr.indexOf("|")) : encoderStr;
+             const encoder = encoderStr.indexOf("|") > 0
+                      ? encoderStr.substr(0, encoderStr.indexOf("|")) 
+                      : encoderStr;
              newObject.profiles.push({ name: encoder, weighting: value, vehicle: encoder });
              newObject.profiles_ch.push({ profile: encoder })
           }
