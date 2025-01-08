@@ -51,9 +51,9 @@ function toSnakeCase(doc) {
 file = process.argv[2];
 
 try {
-  const doc = yaml.safeLoad(fs.readFileSync(file, 'utf8'));
+  const doc = yaml.load(fs.readFileSync(file, 'utf8'));
   const scDoc = toSnakeCase(doc);
-  console.log(yaml.safeDump(scDoc));
+  console.log(yaml.dump(scDoc));
 
 } catch (e) {
   console.log(e);
